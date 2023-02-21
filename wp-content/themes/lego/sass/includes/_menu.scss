@@ -1,0 +1,216 @@
+
+
+.header_menu_links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -28px;
+  margin-left: -28px;
+
+	@include _media-lg() {
+		margin-right: -15px;
+		margin-left: -15px;
+	}
+	@include   _media-md() {
+		margin-right: -10px;
+		margin-left: -10px;
+	}
+	@include _media-sm() {
+		display: none;
+	}
+	li {
+      padding-left: 28px;
+	  padding-right: 28px;
+		@include _media-lg() {
+			padding-left: 15px;
+			padding-right: 15px;
+		}
+		@include   _media-md() {
+			padding-left: 10px;
+			padding-right: 10px;
+		}
+	  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+      flex: 0 0 auto;
+      width: auto;
+      max-width: none;	
+	  position: relative;
+      font-size: $base-big;
+		height: 92px;
+		@include _media-md() {
+			font-size: $base-big-lg;
+			height: 72px;
+		}
+	  a {
+	    display: inline-block;
+        font-weight: 900; 
+        color: $basic; 
+        font-family: $public;
+		  text-decoration: none;text-underline-position: under;
+	  }
+		span {
+			display: none;
+			top: 50%;
+			right: 0;
+			position: absolute;
+			transform: translateY(-50%);
+			width: 15px;
+			height: 30px;
+			i {
+				font-family: "Font Awesome 5 Pro";
+				font-weight: 300;
+				font-style: normal;
+				position: absolute;
+				height: 30px;
+				line-height: 30px;
+				&:before {
+					content: "\f107";
+				}
+			}
+		}
+
+      .items {	     
+		position: relative;
+		  display: -webkit-box;
+		  display: -ms-flexbox;
+		  display: flex !important;
+		  -ms-flex-wrap: nowrap;
+		  flex-wrap: nowrap;
+		  -webkit-box-align: center !important;
+		  -ms-flex-align: center !important;
+		  align-items: center !important;
+		  height: 100%;
+	    &:hover,&:focus {
+          a { color: $basic; text-decoration: underline; }
+	    }
+	  }
+	  &.current-menu-item,&.current-menu-parent {
+          a { color: $basic;text-decoration: underline; }
+		  ul {
+			  li {
+				  a {
+					  text-decoration: none;
+				  }
+			  }
+		  }
+	  }
+	  &.menu-item-has-children {
+	    > .items {
+	      padding-right: 22px;
+			span {
+				display: block;
+			}
+			&:hover,&:focus {
+				cursor: pointer;
+				span {
+					i {
+						transform: rotate(180deg);
+					}
+
+				}
+			}
+
+		}
+	  }
+	} 
+	ul {
+	  position: absolute;
+	  background: $white;
+		box-shadow: 0px 4px 24px rgba(43, 80, 129, 0.1);
+		right: 0;
+		top: 100%;
+		border-top: 1px solid #F5F5F5;
+		padding-top: 30px;
+		padding-bottom: 30px;
+		@include _media-md() {
+			padding-top: 20px;
+			padding-bottom: 20px;
+		}
+	  li {
+		width: 100%;
+		padding: 12px 40px;
+        font-size: $base-big;
+		  height: auto;
+		  position: relative;
+		  @include _media-md() {
+			  padding: 10px 30px;
+			  font-size: $base-big-lg;
+		  }
+		a {
+			white-space: nowrap;
+          font-weight: 400; 
+          color: $basic; 
+          font-family: $public;   	
+		}	
+		span {display: none;}
+
+		.items {
+			display: block !important;
+			&.show_ico {
+				display: -webkit-box;
+				display: -ms-flexbox;
+				display: flex !important;
+				-ms-flex-wrap: nowrap;
+				flex-wrap: nowrap;
+				-webkit-box-align: center !important;
+				-ms-flex-align: center !important;
+				align-items: center !important;
+				.ico,  a {
+					-webkit-box-flex: 0;
+					-ms-flex: 0 0 auto;
+					flex: 0 0 auto;
+					width: auto;
+					max-width: none;
+				}
+				.ico {
+					width: 45px;
+					font-size: 0;
+					line-height: 0;
+					img {
+						max-width: 27px;
+					}
+				}
+			}
+	      &:hover,&:focus {
+          a { color: $primary; text-decoration: none;}
+		  }
+	    }
+		&.current-menu-item,&.current-menu-parent {
+          a { color: $primary; text-decoration: none;}
+	  }
+	  &.menu-item-has-children {
+	    > .items {
+	      padding-right: 30px;
+		}
+	  }
+	  } 
+	}
+}
+
+.header_menu_links li ul {display:none;}
+.header_menu_links li ul li ul {display:none;}
+.header_menu_links li:hover ul {display:block;}
+.header_menu_links li:hover ul li ul {display:none;}
+.header_menu_links li ul li:hover ul {display:block;}
+
+.hamburger{-webkit-border-radius: 0px;-moz-border-radius: 0px;border-radius: 0px; }
+.bg {
+  &.active {
+    z-index: 1000;
+    width: 100%;
+    opacity: 0.8;
+    -webkit-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+    left: 0;
+    right: 0;
+    position: fixed;
+    height: 100%;
+    top: 0;
+    bottom: 0;
+	  background: $basic;
+  }
+}
+ 

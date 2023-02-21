@@ -1,0 +1,31 @@
+{
+    "rampiq.agency": {
+        "siteId": "cJgrdoRUTBNGSAkyqosZGkGZXmiXxWlE",
+        "siteSecret": "M3A0BiribYQ5aihKpOZ1VccUhmpdw4jva9WokjhFlihey7m8GMmUbxuOyxCF1lfN",
+        "blogId": 1,
+        "compression": false,
+        "webhookToken": "f0966f7fa0b4fe24785583649fd355ae",
+        "home_url": "https:\/\/rampiq.agency",
+        "admin_url": "https:\/\/rampiq.agency\/wp-admin\/",
+        "hosting": "wpengine",
+        "alwaysBuffer": true,
+        "isEzoicActive": false,
+        "isApoActive": false,
+        "isLateIntegrationInitRequired": false,
+        "isDlmActive": false,
+        "isWoocommerceCacheHandlerActive": false,
+        "isWoocommerceActive": false,
+        "isAeliaCurrencySwitcherActive": false,
+        "dlm_downloading_url": null,
+        "dlm_download_endpoint": null,
+        "pluginVersion": "1.5.15",
+        "options_cache": {
+            "cache_handler_cache_handler": false,
+            "woocommerce_default_customer_address": false,
+            "wc_aelia_currency_switcher": {
+                "ipgeolocation_enabled": null
+            }
+        }
+    },
+    "config_path": "89872ce6cafc498eb8c348e203e15bb3"
+}

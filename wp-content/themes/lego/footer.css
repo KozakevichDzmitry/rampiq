@@ -1,0 +1,20 @@
+.gform_wrapper form ul.gform_fields:not(.top_label) li.gfield_html_formatted {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+
+.section_wizard_form form .last_block_text,.gform_wrapper li.gfield.field_description_below+li.gsection   {
+    margin-top: 0 !important;
+    padding-bottom:  23px  !important;
+}
+.gform_wrapper .gf_progressbar {
+    width: 100% !important;
+}
+.gform_wrapper ul.gfield_checkbox li label, .gform_wrapper ul.gfield_radio li label {
+    width: 100% !important;
+}
+
+.gform_wrapper li.gfield.gfield_error.gfield_contains_required div.ginput_container, .gform_wrapper li.gfield.gfield_error.gfield_contains_required label.gfield_label {
+    margin-top: 0 !important;
+}
